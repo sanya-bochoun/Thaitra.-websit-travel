@@ -6,11 +6,11 @@ const Header: React.FC = () => (
     <section className="flex">
       <Link to="/" className="logo">Thaitra.</Link>
       <nav className="navbar">
-        <Link to="/">home</Link>
-        <Link to="/about">about</Link>
-        <Link to="/tours">tours</Link>
-        <Link to="/destinations">destinations</Link>
-        <Link to="/contact">contact</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/tours">Tours</Link>
+        <Link to="/destinations">Destinations</Link>
+        <Link to="/contact">Contact</Link>
       </nav>
       <div id="menu-btn" className="fas fa-bars"></div>
     </section>

@@ -29,17 +29,18 @@ const Contact: React.FC = () => {
             <div className="box" data-aos="fade-up">
               <i className="fas fa-envelope"></i>
               <h3>email address</h3>
-              <a href="mailto:shaikhanas@gmail.com">shaikhanas@gmail.come</a>
-              <a href="mailto:anasbhai@gmail.com">anasbhai@gmail.come</a>
+              <a href="mailto:shaikhanas@gmail.com">sbeakjib@gmail.come</a>
+              <a href="mailto:anasbhai@gmail.com">tazzyodev@gmail.come</a>
             </div>
             <div className="box" data-aos="fade-up">
               <i className="fas fa-map-marker-alt"></i>
               <h3>office address</h3>
-              <a href="#">flat no. 01, a-1, jogeshwari, mumbai, india - 400104</a>
+              <a href="#">21/77 kankhehaklongtoey klongtoey
+              klongtoey Bangkok 10110 Thailand</a>
             </div>
           </div>
           <div className="credit">
-            &copy; copyright @ 2023 by <span>mr. web designer</span> | all rights reserved!
+            &copy; copyright @ 2025 by <span>tazzyodev</span> | all rights reserved!
           </div>
         </section>
       </div>
