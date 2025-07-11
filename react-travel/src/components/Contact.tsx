@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
         <h1 className="heading" data-aos="zoom-out">contact us</h1>
         <section>
           <div className="row">
-            <iframe className="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15077.086614958938!2d72.83608960687518!3d19.13958260781318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1672939645362!5m2!1sen!2sin" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" data-aos="flip-left"></iframe>
+            <iframe className="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7752.102173121101!2d100.56109612842783!3d13.71535575840763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sth!2sth!4v1752259681953!5m2!1sth!2sth" style={{border:0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" data-aos="flip-left"></iframe>
             <form action="" method="post" data-aos="flip-right">
               <h3>get in touch</h3>
               <input type="text" name="name" required maxLength={50} placeholder="enter your name" className="box" />
@@ -23,8 +23,8 @@ const Contact: React.FC = () => {
             <div className="box" data-aos="fade-up">
               <i className="fas fa-phone"></i>
               <h3>phone number</h3>
-              <a href="tel:1234567890">+123-456-7890</a>
-              <a href="tel:1112223333">+111-222-3333</a>
+              <a href="tel:664567890">+66-456-7890</a>
+              <a href="tel:662223333">+66-222-3333</a>
             </div>
             <div className="box" data-aos="fade-up">
               <i className="fas fa-envelope"></i>
@@ -49,3 +49,5 @@ const Contact: React.FC = () => {
 };
 
 export default Contact; 
+
+
