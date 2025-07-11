@@ -1,72 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
-:root {
-  --main-color: #ff0;
-  --light-white: rgba(255,255,255,.5);
-  --light-black: rgba(0,0,0,.3);
-  --light-bg: rgba(255,255,255,.1);
-  --white: #fff;
-  --black: #000;
-}
 
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+:root{
+   --main-color:#ff0;
+   --light-white:rgba(255,255,255,.5);
+   --light-black:rgba(0,0,0,.3);
+   --light-bg:rgba(255,255,255,.1);
+   --white:#fff;
+   --black:#000;
 }
 
-body {
-  font-family: 'Comfortaa', cursive;
-  background-color: var(--black);
-  color: var(--white);
-  overflow-x: hidden;
+*{
+   font-family: 'Comfortaa', cursive;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   scrollbar-color: var(--main-color) var(--black);
+   scrollbar-width: thin;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 5rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+*::selection{
+   background-color: var(--main-color);
+   color: var(--black);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+*::-webkit-scrollbar{
+   height: .5rem;
+   width:1rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color:var(--main-color);
+}
+
+body{
+   background-color: var(--black);
+   overflow-x: hidden;
+   /* padding-bottom: 7rem; */
 }
