@@ -1,22 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const About: React.FC = () => {
   return (
     <>
-      <header className="header" data-aos="fade-down">
-        <section className="flex">
-          <Link to="/" className="logo">Travia.</Link>
-          <nav className="navbar">
-            <Link to="/">home</Link>
-            <Link to="/about">about</Link>
-            <Link to="/tours">tours</Link>
-            <Link to="/destinations">destinations</Link>
-            <Link to="/contact">contact</Link>
-          </nav>
-          <div id="menu-btn" className="fas fa-bars"></div>
-        </section>
-      </header>
+      <Header />
       <div className="container about">
         <h1 className="heading" data-aos="zoom-out">about us</h1>
         <section>
@@ -24,7 +12,7 @@ const About: React.FC = () => {
             <div className="box" data-aos="zoom-in">
               <h3>why choose us?</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptate accusantium repellat aliquam esse odit commodi est cumque perferendis rem veritatis minus aliquid delectus eligendi.</p>
-              <Link to="/contact" className="btn">contact us</Link>
+              <a href="/contact" className="btn">contact us</a>
             </div>
           </div>
           <div className="grid">
