@@ -1,22 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Tours: React.FC = () => {
   return (
     <>
-      <header className="header" data-aos="fade-down">
-        <section className="flex">
-          <Link to="/" className="logo">Travia.</Link>
-          <nav className="navbar">
-            <Link to="/">home</Link>
-            <Link to="/about">about</Link>
-            <Link to="/tours">tours</Link>
-            <Link to="/destinations">destinations</Link>
-            <Link to="/contact">contact</Link>
-          </nav>
-          <div id="menu-btn" className="fas fa-bars"></div>
-        </section>
-      </header>
+      <Header />
       <div className="container tours">
         <h1 className="heading" data-aos="zoom-out">popular places</h1>
         <section className="grid">

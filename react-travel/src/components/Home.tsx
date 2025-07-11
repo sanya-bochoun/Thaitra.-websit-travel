@@ -1,23 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Header from "./Header";
 
 const Home: React.FC = () => {
   return (
     <>
-      {/* Header Section */}
-      <header className="header" data-aos="fade-down">
-        <section className="flex">
-          <Link to="/" className="logo">Thaitra.</Link>
-          <nav className="navbar">
-            <Link to="/">home</Link>
-            <Link to="/about">about</Link>
-            <Link to="/tours">tours</Link>
-            <Link to="/destinations">destinations</Link>
-            <Link to="/contact">contact</Link>
-          </nav>
-          <div id="menu-btn" className="fas fa-bars"></div>
-        </section>
-      </header>
+      <Header />
       {/* Home Section */}
       <div className="container home" data-aos="zoom-out">
         <section className="flex" data-aos="zoom-in" data-aos-delay="600">
