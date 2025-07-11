@@ -17,6 +17,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 const TourSearch = require('./models/TourSearch');
 const Contact = require('./models/Contact');
+const Tour = require('./models/Tour');
 
 // API สำหรับบันทึกข้อมูลค้นหาทัวร์
 app.post('/api/tour-search', async (req, res) => {
@@ -33,6 +34,30 @@ app.post('/api/tour-search', async (req, res) => {
 app.get('/api/tour-search', async (req, res) => {
   try {
     const tours = await TourSearch.find().sort({ createdAt: -1 });
+    res.json(tours);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// API สำหรับค้นหาทัวร์ (GET /api/tours?location=...&date=...&guests=...)
+app.get('/api/tours', async (req, res) => {
+  try {
+    const { location, date, guests } = req.query;
+    let filter = {};
+    if (location) filter.location = { $regex: location, $options: 'i' };
+    if (date) {
+      // filter date แบบช่วง (ทั้งวัน)
+      const start = new Date(date);
+      start.setHours(0,0,0,0);
+      const end = new Date(date);
+      end.setHours(23,59,59,999);
+      filter.date = { $gte: start, $lte: end };
+    }
+    // guests สามารถใช้ในอนาคตถ้ามี field ที่เกี่ยวข้อง
+    const tours = await Tour.find(filter).sort({ date: 1 });
+    console.log('[DEBUG] /api/tours filter:', filter);
+    console.log('[DEBUG] /api/tours result:', tours);
     res.json(tours);
   } catch (err) {
     res.status(500).json({ error: err.message });

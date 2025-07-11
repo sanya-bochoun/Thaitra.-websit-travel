@@ -5,27 +5,25 @@ const Home: React.FC = () => {
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState(1);
+  const [tours, setTours] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const data = { location, date, guests };
+    setLoading(true);
+    let url = `http://localhost:5000/api/tours?location=${encodeURIComponent(location)}&date=${encodeURIComponent(date)}&guests=${guests}`;
     try {
-      const res = await fetch("http://localhost:5000/api/tour-search", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(url);
       if (res.ok) {
-        alert("บันทึกข้อมูลสำเร็จ!");
-        setLocation("");
-        setDate("");
-        setGuests(1);
+        const data = await res.json();
+        setTours(data);
       } else {
         alert("เกิดข้อผิดพลาด");
       }
-    } catch (err) {
+    } catch {
       alert("เกิดข้อผิดพลาด");
     }
+    setLoading(false);
   };
 
   return (
@@ -38,12 +36,29 @@ const Home: React.FC = () => {
             <p>where to</p>
             <input type="text" name="location" required maxLength={50} placeholder="enter tour location" className="box" value={location} onChange={e => setLocation(e.target.value)} />
             <p>when to</p>
-            <input type="date" name="date" className="box" required value={date} onChange={e => setDate(e.target.value)} />
+            <input type="date" name="date" className="box" value={date} onChange={e => setDate(e.target.value)} placeholder="เลือกวันที่ (ถ้าไม่เลือกจะค้นหาทั้งหมด)" />
             <p>how many</p>
             <input type="number" name="guests" min={1} max={10} maxLength={2} placeholder="number of guests" required className="box" value={guests} onChange={e => setGuests(Number(e.target.value))} />
-            <input type="submit" value="search tour" name="search" className="btn" />
+            <input type="submit" value={loading ? "searching..." : "search tour"} name="search" className="btn" disabled={loading} />
           </form>
         </section>
+        {tours.length > 0 && (
+          <section className="tours-result">
+            <h2 className="heading">ผลลัพธ์ทัวร์</h2>
+            <div className="grid">
+              {tours.map((tour) => (
+                <div className="box" key={tour._id}>
+                  <div className="tour-title">{tour.name}</div>
+                  <div className="tour-location">{tour.location}</div>
+                  <div className="tour-date">วันที่: {new Date(tour.date).toLocaleDateString()}</div>
+                  <div className="tour-price">ราคา: {tour.price} บาท</div>
+                  {tour.image && <img src={tour.image} alt={tour.name} />}
+                  <div className="tour-desc">{tour.description}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </>
   );

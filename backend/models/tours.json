@@ -1,0 +1,162 @@
+[
+     {
+       "name": "Phuket Paradise",
+       "description": "ทัวร์เกาะภูเก็ต ดำน้ำชมปะการัง น้ำทะเลใส หาดทรายขาว",
+       "location": "Phuket",
+       "price": 8900,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-08-10"
+     },
+     {
+       "name": "Chiang Mai Adventure",
+       "description": "ผจญภัยในเชียงใหม่ เที่ยวดอยอินทนนท์ น้ำตก และวัดดัง",
+       "location": "Chiang Mai",
+       "price": 7500,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-08-15"
+     },
+     {
+       "name": "Bangkok City Tour",
+       "description": "ทัวร์กรุงเทพฯ วัดพระแก้ว พระบรมมหาราชวัง และตลาดน้ำ",
+       "location": "Bangkok",
+       "price": 3500,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-08-20"
+     },
+     {
+       "name": "Ayutthaya Heritage",
+       "description": "ย้อนรอยประวัติศาสตร์อยุธยา ชมวัดโบราณและพระราชวัง",
+       "location": "Ayutthaya",
+       "price": 4200,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-08-25"
+     },
+     {
+       "name": "Krabi Island Hopping",
+       "description": "ทัวร์เกาะกระบี่ ทะเลแหวก เกาะปอดะ เกาะไก่",
+       "location": "Krabi",
+       "price": 9500,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-09-01"
+     },
+     {
+       "name": "Pattaya Beach Fun",
+       "description": "สนุกกับกิจกรรมชายหาดพัทยา พาราเซลลิ่ง เจ็ทสกี",
+       "location": "Pattaya",
+       "price": 3900,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-09-05"
+     },
+     {
+       "name": "Kanchanaburi Nature",
+       "description": "สัมผัสธรรมชาติ กาญจนบุรี น้ำตกเอราวัณ สะพานข้ามแม่น้ำแคว",
+       "location": "Kanchanaburi",
+       "price": 4800,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-09-10"
+     },
+     {
+       "name": "Samui Island Escape",
+       "description": "พักผ่อนบนเกาะสมุย หาดเฉวง น้ำตกหน้าเมือง",
+       "location": "Koh Samui",
+       "price": 10500,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-09-15"
+     },
+     {
+       "name": "Hua Hin Relax",
+       "description": "เที่ยวหัวหิน ตลาดโต้รุ่ง พระราชวังไกลกังวล",
+       "location": "Hua Hin",
+       "price": 4100,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-09-20"
+     },
+     {
+       "name": "Pai Mountain Retreat",
+       "description": "สัมผัสอากาศเย็นสบายที่ปาย ชมวิวภูเขาและแม่น้ำ",
+       "location": "Pai",
+       "price": 6200,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-09-25"
+     },
+     {
+       "name": "Sukhothai Historical Park",
+       "description": "ทัวร์อุทยานประวัติศาสตร์สุโขทัย ชมวัดเก่าแก่",
+       "location": "Sukhothai",
+       "price": 5300,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-10-01"
+     },
+     {
+       "name": "Koh Phi Phi Snorkeling",
+       "description": "ดำน้ำดูปะการังที่เกาะพีพี น้ำใส หาดสวย",
+       "location": "Koh Phi Phi",
+       "price": 9900,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-10-05"
+     },
+     {
+       "name": "Trang Island Discovery",
+       "description": "ทัวร์เกาะตรัง ถ้ำมรกต เกาะกระดาน",
+       "location": "Trang",
+       "price": 8700,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-10-10"
+     },
+     {
+       "name": "Lampang Elephant Care",
+       "description": "ดูแลช้างที่ลำปาง เรียนรู้วิถีชีวิตช้างไทย",
+       "location": "Lampang",
+       "price": 5600,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-10-15"
+     },
+     {
+       "name": "Rayong Fruit Festival",
+       "description": "เที่ยวสวนผลไม้ระยอง ชิมผลไม้สดๆ จากสวน",
+       "location": "Rayong",
+       "price": 3200,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-10-20"
+     },
+     {
+       "name": "Nakhon Ratchasima Safari",
+       "description": "ซาฟารีโคราช สวนสัตว์และธรรมชาติ",
+       "location": "Nakhon Ratchasima",
+       "price": 4700,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-10-25"
+     },
+     {
+       "name": "Mae Hong Son Loop",
+       "description": "ขับรถเที่ยวแม่ฮ่องสอน ชมวิวภูเขาและหมอก",
+       "location": "Mae Hong Son",
+       "price": 8800,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-11-01"
+     },
+     {
+       "name": "Surat Thani River Cruise",
+       "description": "ล่องเรือแม่น้ำสุราษฎร์ธานี ชมธรรมชาติสองฝั่ง",
+       "location": "Surat Thani",
+       "price": 5400,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-11-05"
+     },
+     {
+       "name": "Phang Nga Bay Kayaking",
+       "description": "พายเรือคายัคอ่าวพังงา ชมถ้ำและภูเขาหินปูน",
+       "location": "Phang Nga",
+       "price": 9200,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-11-10"
+     },
+     {
+       "name": "Ubon Candle Festival",
+       "description": "ชมงานแห่เทียนพรรษาอุบลราชธานี",
+       "location": "Ubon Ratchathani",
+       "price": 3700,
+       "image": "https://res.cloudinary.com/ddlnfwevx/image/upload/v1752262664/tour-bg_dtt6hn.jpg",
+       "date": "2024-11-15"
+     }
+   ]
