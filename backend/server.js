@@ -7,12 +7,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// เชื่อมต่อ MongoDB local
+// เชื่อมต่อ MongoDB (local หรือ Atlas)
+const isAtlas = process.env.MONGO_URI && process.env.MONGO_URI.startsWith('mongodb+srv://');
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-  .then(() => console.log('✅ [MongoDB] เชื่อมต่อ MongoDB (local) สำเร็จ! 🚀'))
+  .then(() => {
+    if (isAtlas) {
+      console.log('✅ [MongoDB] เชื่อมต่อ MongoDB Atlas (Cloud) สำเร็จ! 🚀');
+    } else {
+      console.log('✅ [MongoDB] เชื่อมต่อ MongoDB (local) สำเร็จ! 🚀');
+    }
+  })
   .catch(err => console.error('❌ [MongoDB] เชื่อมต่อ MongoDB ไม่สำเร็จ:', err));
 
 const TourSearch = require('./models/TourSearch');
