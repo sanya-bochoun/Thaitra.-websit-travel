@@ -52,19 +52,19 @@ app.get('/api/tours', async (req, res) => {
   try {
     const { location, date, guests } = req.query;
     let filter = {};
-    if (location) filter.location = { $regex: location, $options: 'i' };
+    if (location) {
+      filter.location = { $regex: `^${location.trim()}$`, $options: 'i' };
+    }
     if (date) {
-      // filter date แบบช่วง (ทั้งวัน)
       const start = new Date(date);
       start.setHours(0,0,0,0);
       const end = new Date(date);
       end.setHours(23,59,59,999);
       filter.date = { $gte: start, $lte: end };
     }
-    // guests สามารถใช้ในอนาคตถ้ามี field ที่เกี่ยวข้อง
+    console.log('[DEBUG] QUERY:', JSON.stringify(filter));
     const tours = await Tour.find(filter).sort({ date: 1 });
-    console.log('[DEBUG] /api/tours filter:', filter);
-    console.log('[DEBUG] /api/tours result:', tours);
+    console.log('[DEBUG] RESULT:', tours);
     res.json(tours);
   } catch (err) {
     res.status(500).json({ error: err.message });

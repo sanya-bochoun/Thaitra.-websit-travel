@@ -1,17 +1,27 @@
 import React, { useState } from "react";
 import Header from "./Header";
 
+interface Tour {
+  _id?: string;
+  name: string;
+  description: string;
+  location: string;
+  price: number;
+  image?: string;
+  date: string;
+}
+
 const Home: React.FC = () => {
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
   const [guests, setGuests] = useState(1);
-  const [tours, setTours] = useState<any[]>([]);
+  const [tours, setTours] = useState<Tour[]>([]);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    let url = `http://localhost:5000/api/tours?location=${encodeURIComponent(location)}&date=${encodeURIComponent(date)}&guests=${guests}`;
+    const url = `http://localhost:5000/api/tours?location=${encodeURIComponent(location)}&date=${encodeURIComponent(date)}&guests=${guests}`;
     try {
       const res = await fetch(url);
       if (res.ok) {

@@ -69,6 +69,28 @@ npm install
 - บันทึกข้อมูลติดต่อ (POST /api/contact)
 - ระบบแยก frontend/backend ชัดเจน
 - ใช้ Cloudinary สำหรับเก็บรูปภาพทัวร์
+- **Responsive Hamburger Menu** (เมนู ☰ สำหรับจอเล็ก)
+
+## วิธีเพิ่ม Font Awesome (สำหรับ hamburger menu)
+1. เปิดไฟล์ `react-travel/public/index.html`
+2. เพิ่มบรรทัดนี้ใน `<head>`:
+   ```html
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+   ```
+3. Save แล้วรีเฟรชหน้าเว็บ
+
+## Troubleshooting (ปัญหาที่พบบ่อย)
+- **Hamburger menu ไม่แสดง:**
+  - ตรวจสอบว่าเพิ่ม Font Awesome ใน index.html แล้ว
+  - รีเฟรช cache (Ctrl+F5)
+  - ย่อหน้าจอให้ต่ำกว่า 769px
+- **API ไม่ตอบสนองหลัง deploy:**
+  - ตรวจสอบ log ของ Render ว่าเชื่อมต่อ MongoDB Atlas สำเร็จหรือไม่
+  - ตรวจสอบว่า MONGO_URI ถูกต้อง และ whitelist IP แล้ว
+  - ตรวจสอบว่าเลือก root directory เป็น backend
+- **Frontend fetch ไม่เจอ backend:**
+  - ตรวจสอบว่า fetch ไปที่ URL ของ backend ที่ Render จริง
+  - ตั้งค่า CORS ใน backend ให้รองรับ origin ของ frontend
 
 ## หมายเหตุ
 - สามารถปรับแต่งข้อมูลทัวร์, เพิ่มฟีเจอร์, หรือเปลี่ยนดีไซน์ได้ตามต้องการ
